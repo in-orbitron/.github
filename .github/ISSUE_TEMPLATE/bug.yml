@@ -1,0 +1,104 @@
+name: Bug Report
+description: Report a bug in the project.
+title: "[BUG]"
+labels: bug
+type: bug
+assignees: ''
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      ### Before Submitting
+      - Search for similar issues before submitting.
+      - Include steps to reproduce and describe the expected and actual behavior.
+      - Add environment details when relevant.
+
+      ### For Larger Tasks
+      If investigating or fixing this bug involves several independent tasks, consider linking it to a parent issue and tracking each task in a separate issue. If you are unsure how to split the work, describe the overall goal and maintainers can help.
+
+- type: textarea
+  id: description
+  attributes:
+    label: Bug Description
+    description: Describe the bug you encountered.
+    placeholder: "I encountered a bug where..."
+  validations:
+    required: true
+
+- type: dropdown
+  id: type
+  attributes:
+    label: Bug Type
+    description: Select the type of bug you encountered.
+    options:
+      - CI
+      - Functionality
+      - Performance
+      - Security
+      - Other
+  validations:
+    required: true
+
+- type: textarea
+  id: steps_to_reproduce
+  attributes:
+    label: Steps to Reproduce
+    description: Describe the steps to reproduce the bug.
+    placeholder: "1. Go to...\n2. Click on...\n3. Observe..."
+  validations:
+    required: true
+
+- type: textarea
+  id: expected_behavior
+  attributes:
+    label: Expected Behavior
+    description: Describe the expected behavior of the feature or functionality.
+    placeholder: "The expected behavior is..."
+  validations:
+    required: true
+
+- type: textarea
+  id: actual_behavior
+  attributes:
+    label: Actual Behavior
+    description: Describe the actual behavior you observed.
+    placeholder: "The actual behavior is..."
+  validations:
+    required: true
+
+- type: textarea
+  id: environment
+  attributes:
+    label: Environment
+    description: Describe the environment in which the bug occurred (e.g., OS, browser, version).
+    placeholder: "The bug occurred in..."
+  validations:
+    required: false
+
+- type: textarea
+  id: additional_information
+  attributes:
+    label: Additional Information
+    description: Provide any additional information that might be relevant to the bug.
+    placeholder: "Any other relevant information..."
+  validations:
+    required: false
+
+- type: textarea
+  id: proposed_solution
+  attributes:
+    label: Proposed Solution
+    description: Describe how you think this bug could be fixed.
+    placeholder: "I propose that..."
+  validations:
+    required: false
+
+- type: textarea
+  id: alternative_solution
+  attributes:
+    label: Alternative Solution
+    description: Describe any alternative solutions to fix the bug.
+    placeholder: "An alternative solution could be..."
+  validations:
+    required: false
