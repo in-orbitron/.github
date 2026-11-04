@@ -1,0 +1,60 @@
+name: Feature Request
+description: Suggest a new feature for the project.
+title: "[FEATURE]"
+labels: enhancement
+type: feature
+assignees: ''
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      ### Before Submitting
+      - Search for similar feature requests before submitting.
+      - Describe the outcome you want and include relevant context.
+
+      ### For Larger Requests
+      If this proposal has several independent deliverables, consider creating a parent issue and a linked issue for each deliverable. If you are unsure how to split the work, describe the overall goal and maintainers can help.
+
+- type: textarea
+  id: description
+  attributes:
+    label: Feature Description
+    description: Describe clearly and concisely the feature you would like to see implemented.
+    placeholder: "I would like to have..."
+  validations:
+    required: true
+
+- type: dropdown
+  id: type
+  attributes:
+    label: Suggested Feature Type
+    description: Select the suggested type of feature you are requesting.
+    options:
+      - Feature
+      - Refactor
+      - CI
+      - Documentation
+      - Performance
+      - Security
+      - Other
+  validations:
+    required: true
+
+- type: textarea
+  id: proposed_solution
+  attributes:
+    label: Proposed Solution
+    description: Describe how you envision this feature being implemented.
+    placeholder: "I propose that..."
+  validations:
+    required: false
+
+- type: textarea
+  id: alternative_solutions
+  attributes:
+    label: Alternative Solutions
+    description: Describe any alternative solutions you have considered.
+    placeholder: "An alternative approach could be..."
+  validations:
+    required: false
